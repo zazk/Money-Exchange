@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.EntityFrameworkCore;
+using MoneyExchange.Models;
 
 namespace MoneyExchange
 {
@@ -24,6 +26,8 @@ namespace MoneyExchange
         {
             services.AddCors();
             services.AddMvc();
+            services.AddDbContext<MvcExchangeContext>(options =>
+                            options.UseSqlite("Data Source=MoneyExchange.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
