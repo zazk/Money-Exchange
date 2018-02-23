@@ -4,29 +4,31 @@ using System.Collections.Generic;
 
 namespace MoneyExchange.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class AddUsers : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+
             migrationBuilder.CreateTable(
-                name: "Exchange",
+                name: "User",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    code = table.Column<string>(type: "TEXT", nullable: true),
-                    value = table.Column<double>(type: "INTEGER", nullable: false)
+                    login = table.Column<string>(type: "TEXT", nullable: true),
+                    password = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Exchange", x => x.ID);
+                    table.PrimaryKey("PK_User", x => x.ID);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Exchange");
+                name: "User");
+
         }
     }
 }

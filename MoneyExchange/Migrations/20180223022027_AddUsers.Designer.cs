@@ -10,9 +10,10 @@ using System;
 namespace MoneyExchange.Migrations
 {
     [DbContext(typeof(MvcExchangeContext))]
-    partial class MvcExchangeContextModelSnapshot : ModelSnapshot
+    [Migration("20180223022027_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

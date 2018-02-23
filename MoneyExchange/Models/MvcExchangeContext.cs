@@ -11,5 +11,6 @@ namespace MoneyExchange.Models
         }
 
         public DbSet<MoneyExchange.Models.Currency> Exchange { get; set; }
+        public DbSet<MoneyExchange.Models.User> User { get; set; }
     }
 }

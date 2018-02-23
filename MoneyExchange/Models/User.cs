@@ -3,8 +3,8 @@ namespace MoneyExchange.Models
 {
     public class User
     {
-        int ID { get; set}
-        string login { get; set; }
-        string password { get; set; }
+        public int ID { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
     }
 }

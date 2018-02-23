@@ -26,7 +26,7 @@ namespace MoneyExchange.Migrations
 
                     b.Property<string>("code");
 
-                    b.Property<long>("value");
+                    b.Property<double>("value");
 
                     b.HasKey("ID");
 
