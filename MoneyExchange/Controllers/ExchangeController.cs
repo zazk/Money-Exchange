@@ -55,7 +55,6 @@ namespace MoneyExchange.Controllers
         {
             if (ModelState.IsValid)
             {
-                currency.value = 24.32324;
                 _context.Add(currency);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
